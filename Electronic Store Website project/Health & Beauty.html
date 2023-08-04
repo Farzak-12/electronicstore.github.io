@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>          
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color:white;
+}
+        .limg1{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            list-style-type: none;
+            margin-top:5px;
+            padding: 0;
+            overflow:auto;
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            border-radius: 4px;
+            padding-right: 4px;
+            padding-left: 4px;
+            padding-left: 16px;
+            padding-right: 16px;
+            background-color: azure;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1184px;
+            width: 100%;
+            flex-wrap: wrap;
+            flex: 0 1 auto;
+            display: flex;
+            display: block;
+        }
+        .cmr{
+            margin-top: 2cm;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-size: 0.875rem;
+            align-self: center;
+            background-color:azure;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%);
+            box-sizing: border-box;
+        }
+        .di{
+            padding-bottom: 8px;
+            display: block;
+            padding-top: 8px;
+            flex-basis: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            width: 100%;
+            padding-right: 8px;
+            box-sizing: border-box;
+            font-size: 0.875rem;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            border-radius: 4px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            background-color: azure;
+        } 
+        html {
+            text-size-adjust: 100%;
+        }
+        
+        
+        body{
+            background-color: azure;
+        }
+        li {
+            float: left;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-size: 0.875rem;
+}           
+        li a, .dropdownbtn{
+            display: inline-block;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .lsdc{
+            list-style-type: none;
+            margin-top:5px;
+            padding: 0;
+            overflow:auto;
+            background-color: #96D2C8;;
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            border-radius: 4px;
+            padding-right: 4px;
+            padding-left: 4px;
+            background: #96D2C8;
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 0px;
+            min-height: 48px;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1184px;
+            width: 100%;
+            flex-wrap: wrap;
+            flex: 0 1 auto;
+            display: flex;
+            display: block;
+            font-size: 1.25rem;
+            text-overflow: ellipsis;
+            font-weight: 500;
+
+}
+        .lic a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: #96D2C8;;
+            margin-left:8.37cm ;
+        }
+        .l a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: #96D2C8;;
+        }
+        .c a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: #96D2C8;;
+            margin-left: 2cm;
+        }
+        .c a:hover {
+            background-color: #8cc7bdda;
+}
+       .l a:hover {
+            background-color: #8cc7bdda;
+}
+        .lic a:hover {
+            background-color: #8cc7bdda;
+}
+        .dropdownbtn {
+            background-color: #96D2C8;;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+}
+        .searchbtn{
+            background-color: #96D2C8;;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }   
+        li.dropdown {
+            
+            display: inline-block;
+}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+}
+        img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+}
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+}
+        .dropdown-content a:hover{ 
+            background-color: #cacaca
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+}
+        .searchbtn:hover{
+    background-color: #8cc7bdda;;  
+}
+        .dropdown:hover .dropdownbtn  {
+            background-color: #8cc7bdda;
+}
+        .sec{
+            overflow: hidden;
+            border-radius: 4px;
+            width: 100%;
+            border-radius: 0px;
+            box-shadow: rgb(0 0 0 / 5%) 0px 2px 5px 0px;
+            background-color: rgb(255, 255, 255);
+            display: block;
+            box-sizing: border-box;
+            display: block;
+            font-size: 0.875rem;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        }
+        input{
+            font-size: 1rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 8px;
+            height: 100%;
+            box-shadow: none;
+            flex-grow: 1;
+            overflow: hidden;
+            outline: 0px;
+            border: 0px;
+            margin: 0px;
+            overflow: visible;
+            border-radius: 0px;
+            box-sizing: border-box;
+            cursor: default;
+            background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
+            color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
+            border-color: rgba(118, 118, 118, 0.3);
+            writing-mode: horizontal-tb !important;
+            text-rendering: auto;
+            color: fieldtext;
+            letter-spacing: normal;
+            word-spacing: normal;
+            line-height: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            appearance: auto;
+            -webkit-rtl-ordering: logical;
+            cursor: text;
+            background-color: field;
+            margin: 0em;
+            padding: 1px 2px;
+            border-width: 2px;
+            border-style: inset;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            border-image: initial;
+            font-size: 0.875rem;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            box-sizing: border-box;
+            box-sizing: border-box;
+}
+        li{
+            list-style-type: none;
+        }
+        .len{
+            text-decoration: none;
+            color: #111;
+            text-overflow: ellipsis;
+        }
+        .len:hover{
+            background-color: #8cc7bdda;
+        }
+        .im:hover{
+            box-shadow: rgb(0 0 0 / 100%) 0px 2px 5px 0px;
+            background-color: azure;
+            animation:5cm;
+        }
+        .sec{
+            overflow: hidden;
+            border-radius: 4px;
+            width: 100%;
+            box-shadow: rgb(0 0 0 / 5%) 0px 2px 5px 0px;
+            background-color: azure;
+            display: block;
+            box-sizing: border-box;
+            display: block;
+            font-size: 0.875rem;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            align-self: center;
+            box-sizing: border-box;
+        }
+        .lsd{
+            list-style-type: none;
+            margin-top:5px;
+            padding: 0;
+            overflow:auto;
+            background-color: white;
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            border-radius: 4px;
+            padding-right: 4px;
+            padding-left: 4px;
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 0px;
+            min-height: 48px;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1184px;
+            width: 100%;
+            flex-wrap: wrap;
+            flex: 0 1 auto;
+            display: flex;
+            display: block;
+            font-size: 1.25rem;
+            text-overflow: ellipsis;
+            font-weight: 500;
+        }
+        .cart{
+            background-color: #96D2C8;
+            color: black;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            align-self: center;
+            font-family:Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            align-items: center;
+            margin-left: 1.5cm;
+            margin-top: 2px;
+        }
+        .cart:hover{
+            background-color: #389485da;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li>
+            <div class="dropdown">
+            <button class="dropdownbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="Supermarket.html">Supermarket</a>
+                <a href="Health & Beauty.html">Health & Beauty</a>
+                <a href="Home & Office.html">Home & Office</a>
+                <a href="Phones & Tablets.html">Phones & Tablets</a>
+                <a href="Computing.html">Computing</a>
+                <a href="Electronics.html">Electronics</a>
+                <a href="Fashion.html">Fashion</a>
+                <a href="Baby Product.html">Baby Products</a>
+                <a href="Gaming.html">Gaming</a>
+                <a href="Sporting Goods.html">Sporting Goods</a>
+                <a href="Other Categories.html">Other Categories</a>
+            </div>
+            </div>
+        </li>
+        <li class="c" style="margin-right: 2cm;"><a href="Home.html">Home</a></li>
+        <li class="l">
+            <form>
+            <label for="searchbtn" class="" style="color: black;">Search for item to be purchased</label>
+            <input style="height:1cm; width: 10cm;" placeholder="Search for products, brands, categories">
+            <button class="searchbtn">Search</button>
+        </form></li>
+        
+        <li class="lic";><a href="" >Cart</a></li>        
+    </ul>
+    <div class="cmr">
+        <header class="lsd">Health & Beauty</header>
+        
+    </div>
+    
+    <div class="di">
+        <section class="sec">
+        <header class="lsdc">Limited Stock Deals</header>
+        
+        <ul class="limg1">
+            <li class="le" style="background-color: azure;margin-left: 1cm;">
+                <a href="" class="im"><img src="Denim Denim Antiperspirant.jpg" alt="lenovo bala" class="img1" height="185" width="185" title="frr" ></a>
+                <div class="leno" style="text-overflow: ellipsis; white-space: nowrap; display: block"><a class="len" style="text-overflow: ellipsis; white-space: nowrap; display: block;">Denim Denim Antiperspirant<br>$130,990</a></div>
+                <a href=""class="cart">
+                    Add to Cart
+                </a>
+            </li>
+            <li style="background-color: azure; margin-left: 0.6cm;">
+                <a href="" class="im"><img src="Denim Denim Body Cream.jpg" alt="lenovo bala" class="img1" height="185" width="185" ></a>
+                <div class="leno" style="text-overflow: ellipsis; white-space: nowrap; display: block"><a class="len" style="text-overflow: ellipsis; white-space: nowrap; display: block;">Denim Denim Body Cream<br>$130,990</a></div>
+                
+                <a href=""class="cart">
+                    Add to Cart
+                </a>
+            </li>
+            <li style="background-color: azure;margin-left: 0.6cm;">
+                <a href="" class="im"><img src="Eva Cosmetic Pearl Soap.jpg" alt="lenovo bala" class="img1" height="185" width="185"></a>
+                <div class="leno" style="text-overflow: ellipsis; white-space: nowrap; display: block"><a class="len" style="text-overflow: ellipsis; white-space: nowrap; display: block;">Eva Cosmetic Pearl Soap<br>$130,990</a></div>
+                
+                    <a href=""class="cart">
+                        Add to Cart
+                    </a>
+                    
+            </li>
+            <li style="background-color: azure;margin-left: 0.6cm;">
+                <a href=""class="im"><img src="Eva Cosmetics Forever Soap.jpg" alt="lenovo bala" class="img1" height="185" width="185"></a>
+                <div class="leno" style="text-overflow: ellipsis; white-space: nowrap; display: block"><a class="len" style="text-overflow: ellipsis; white-space: nowrap; display: block;">Eva Cosmetics Forever Soap<br>$130,990</a></div>
+                
+                    <a href=""class="cart">
+                        Add to Cart
+                    </a>
+                    
+            </li>
+            <li style="background-color: azure;margin-left: 0.6cm;">
+                <a href class="im"><img src="Angel Sanitary Pad.jpg" alt="lenovo bala" class="img1" height="185" width="185"></a>
+                <div class="leno" style="text-overflow: ellipsis; white-space: nowrap; display: block"><a class="len" style="text-overflow: ellipsis; white-space: nowrap; display: block;">Angel Sanitary Pad<br>$130,990</a></div>
+                    <a href=""class="cart">
+                        Add to Cart
+                    </a>
+            </li>
+            <li style="background-color: azure;margin-top: 0.5cm; margin-left:1cm;">
+                <a href="" class="im"><img src="Angel Wipes Refil.jpg" alt="lenovo bala" class="img1" height="185" width="185"></a>
+                <div class="leno" style="text-overflow: ellipsis; white-space: nowrap; display: block"><a class="len" style="text-overflow: ellipsis; white-space: nowrap; display: block;">Angel Wipes Refil<br>$130,990  </a></div>
+                    <a href=""class="cart">
+                        Add to Cart
+                    </a>
+            </li>
+        </ul>
+    </section>
+</div>
+</body>
+</html>
